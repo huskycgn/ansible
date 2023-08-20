@@ -1,0 +1,25 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install httpd package
+    dnf:
+      name: httpd
+      state: latest
+
+  - name: install iftop package
+    dnf:  
+      name: iftop
+      state: latest
+
+  - name: install git package
+    dnf:
+      name: git
+      state: latest
+
+  - name: install fzf package
+    dnf:
+      name: fzf
+      state: latest
